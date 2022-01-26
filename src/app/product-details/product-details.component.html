@@ -1,0 +1,16 @@
+<div *ngIf="userLoged">
+  <div class="backButton">
+      <button (click)="backToProductList()">
+          <i class="material-icons">chevron_left</i>Back to product list
+        </button>
+  </div>
+  <h2>Product details</h2>
+  <p><strong>{{productSelected.name}}</strong></p>
+  <p><strong>{{productSelected.price | currency:'USD':true}}</strong></p>
+  <p><strong>Category:</strong> {{productSelected.category}}</p>
+  <p><strong>Description:</strong> {{productSelected.description}}</p>
+</div>
+
+<div *ngIf="!userLoged">
+  <h2>Utente non loggato</h2>
+</div>
