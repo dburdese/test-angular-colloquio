@@ -2,7 +2,8 @@
 .filterSection {
     height: 44px;
     border: 1px solid #1976d2;
-    // width: 100% !important;
+    position: fixed;
+    width: 89% !important;
     margin: 0px 0px 10px;
     input {
       border: 1px solid transparent;
@@ -17,6 +18,10 @@
       margin-top: 2%;
       position: absolute;
     }
+}
+
+.products-list > :first-child {
+  margin-top: 22%;
 }
 
 .item {

@@ -23,7 +23,7 @@ export class FilterListPipe implements PipeTransform {
     //return the searchText array
     return items.filter(element => {
       if(element && element[filterBy]) {
-         return element[filterBy].toLowerCase().includes(searchText);
+        return element[filterBy].toLowerCase().includes(searchText);
       }
     })
   }
