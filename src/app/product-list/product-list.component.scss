@@ -1,0 +1,32 @@
+//color: #1976d2;
+.filterSection {
+    height: 44px;
+    border: 1px solid #1976d2;
+    position: fixed;
+    width: 89% !important;
+    margin: 0px 0px 10px;
+    input {
+      border: 1px solid transparent;
+      width: 92%;
+      padding: 0px 10px;
+      height: 40px;
+      outline: none;
+      margin-top: 1px;
+    }
+    i {
+      color: #1976d2;
+      margin-top: 2%;
+      position: absolute;
+    }
+}
+
+.products-list > :first-child {
+  margin-top: 22%;
+}
+
+.item {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom: 15px;
+}
