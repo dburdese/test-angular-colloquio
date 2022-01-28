@@ -1,33 +1,16 @@
 <div *ngIf="userLoged">
     <h2>Products</h2>
-
-    <div class="filterSection">
-        <input type="text" [(ngModel)]="searchText" placeholder="Filtra per categoria" />
-        <i class="material-icons" (click)="searchText = ''">close</i>
+    <div class="container">
+        <div class="filterSection">
+            <input type="text" [(ngModel)]="searchText" placeholder="Filtra per categoria" />
+        </div>
     </div>
     <!-- choosed to create a pipe in order to recycle it in multiple views, with
     that pipe we can change the parameter for the filter, in this case we are using 'category',
     but it can be, name, id etc
     -->
-    
-    <div class="products-list">
-        <div *ngFor="let product of products | filterList : searchText : 'category'">
-    
-            <div class="item">
-                <h4>
-                    {{ product.name }}
-                </h4>
-                <p *ngIf="product.description">
-                    <b>Category:</b> {{ product.category }}
-                    <br>
-                    <b>Description:</b> {{ product.description }}
-                </p>
-                <button (click)="goToProductDetails(product)">
-                    Vedi dettaglio
-                </button>
-            </div>
-        </div>
-    </div>
+
+    <app-list-of-products [productList]="products" [filterText]="searchText"></app-list-of-products>
 </div>
 <div *ngIf="!userLoged">
     <h2>User not logged in</h2>

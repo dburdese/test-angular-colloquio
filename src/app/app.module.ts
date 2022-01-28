@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FilterListPipe } from './filter-list.pipe';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ListOfProductsComponent } from './list-of-products/list-of-products.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     TopBarComponent,
     ProductListComponent,
     FilterListPipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ListOfProductsComponent
   ],
   bootstrap: [
     AppComponent

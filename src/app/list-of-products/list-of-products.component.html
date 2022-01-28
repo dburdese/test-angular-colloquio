@@ -1,0 +1,17 @@
+<div class="products-list">
+    <div *ngFor="let product of productList | filterList : filterText : 'category'">
+        <div class="item">
+            <h4>
+                {{ product.name }}
+            </h4>
+            <p *ngIf="product.description">
+                <b>Category:</b> {{ product.category }}
+                <br>
+                <b>Description:</b> {{ product.description }}
+            </p>
+            <button (click)="goToProductDetails(product)">
+                Vedi dettaglio
+            </button>
+        </div>
+    </div>
+</div>
